@@ -3,9 +3,7 @@ let dataEnv = {};
 fetch('../../env.json')
     .then(response => response.json())
     .then(env => {
-                    
         dataEnv = env;
-
     })
     .catch(error => console.error(
         'Houve um erro ao tentar recuperar as variáveis de ambiente:', error
@@ -34,6 +32,6 @@ $('#form1')
        alert('Resultado: ' + result);
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
-        console.log('Requisição não concluída: ', textStatus, errorThrown);
+        console.error('Requisição não concluída: ' + textStatus, errorThrown);
     });
 });
