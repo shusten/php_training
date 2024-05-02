@@ -2,17 +2,13 @@
 
     header('Content-Type: application/json');
 
-    $json = file_get_contents('./env.json');
-
-    // Decodifica o JSON para um array
-    $env = json_decode($json, true);
-
+    require_once('./env.php');
+    
     $name = $_POST['name'] ?? '';
     $comment = $_POST['comment'] ?? '';
 
     try {
-        // Tenta conectar ao banco de dados
-        $pdo = new PDO("mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']}", $env['DB_USER'], $env['DB_PASS']);
+        $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $pdo->prepare('INSERT INTO comments (name, comment) VALUES (:na, :co)');

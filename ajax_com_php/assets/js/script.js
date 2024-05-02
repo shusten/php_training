@@ -1,14 +1,4 @@
-let dataEnv = {};
-
-fetch('../../env.json')
-    .then(response => response.json())
-    .then(env => {
-        dataEnv = env;
-    })
-    .catch(error => console.error(
-        'Houve um erro ao tentar recuperar as variáveis de ambiente:', error
-        )
-    );
+const ENV = 'localhost:8081';
 
 $('#form1')
 .on('submit', function(e){
@@ -23,7 +13,7 @@ $('#form1')
     };
 
     $.ajax({
-        url: 'http://' + dataEnv.URL + '/inserir.php',
+        url: `http://${ENV}/inserir.php`,
         method: 'POST',
         data: data,
         dataType: 'json',
