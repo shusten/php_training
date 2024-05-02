@@ -1,10 +1,9 @@
-# Usar a imagem oficial do PHP com Apache como base
 FROM php:7.4.30-apache-buster
 
-# Copiar os arquivos do sistema para o diretório raiz do Apache
+RUN docker-php-ext-install pdo_mysql
+
 COPY ./ /var/www/html/
 
-# Alterar as permissões de todas as pastas e subpastas para 777
 RUN chmod -R 777 /var/www/html/
 
 # Habilitar o módulo headers_module do Apache
