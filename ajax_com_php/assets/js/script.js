@@ -20,10 +20,9 @@ $('#form1')
     })
     .done(function(result){
         $('#name').val('');
-        $('#comment').val('');          
-        console.log('Resultado: ' + result);
+        $('#comment').val('');
+        getComments();          
     })
-
     .fail(function(jqXHR, textStatus, errorThrown) {
         console.error('Requisição não concluída: ' + textStatus, errorThrown);
     });
