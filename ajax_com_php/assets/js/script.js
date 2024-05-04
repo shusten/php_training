@@ -28,18 +28,25 @@ $('#form1')
     });
 });
 
-function getComments(){
+function getComments() {
     $.ajax({
         url: `http://${ENV}/selecionar.php`,
         method: 'GET',
         dataType: 'json'
-    }).done(function(result){
-        console.log(result);
+    }).done(displayComments);
+}
 
-        for (var i = 0; i < result.length; i++ ) {
-            $('.box_comment').prepend('<div class="b_comm"><h4>' + result[i].name + '</h4><p>' + result[i].comment + '</p></div>');
-        }
-    })
+function displayComments(comments) {
+    console.log(comments);
+
+    var commentHtml = comments.map(comment => `
+        <div class="b_comm">
+            <h4>${comment.name}</h4>
+            <p>${comment.comment}</p>
+        </div>
+    `).join('');
+
+    $('.box_comment').prepend(commentHtml);
 }
 
 getComments();
