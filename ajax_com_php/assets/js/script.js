@@ -39,6 +39,8 @@ function getComments() {
 function displayComments(comments) {
     console.log(comments);
 
+    comments.reverse();
+
     var commentHtml = comments.map(comment => `
         <div class="b_comm">
             <h4>${comment.name}</h4>
