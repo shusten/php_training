@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Sistema de Comentários | PHP e AJAX</title>
-
+	<link rel="icon" type="image/x-icon" href="./assets/images/faviconPhp.ico">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
