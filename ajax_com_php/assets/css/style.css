@@ -5,15 +5,20 @@
 }
 
 body {
-	background: linear-gradient(130deg, rgb(9, 0, 55) 0%, rgb(51, 9, 142) 38%, rgb(28, 0, 68) 100%);
+	background: linear-gradient(130deg, #090037 0%, #33098e 38%, #1c0044 100%);
     font-family: 'Segoe UI', 'Arial';
 	height: 100vh;
     margin: 0;
     background-attachment: fixed;
 }
 
-h1, label, h4 {
-    color: #b7dfff;
+h1, h4 {
+    color: #8b55ff;
+}
+
+h4 {
+    color: #8b55ff;
+	margin-bottom: 20px;
 }
 
 h1 {
@@ -22,7 +27,9 @@ h1 {
 }
 
 label {
-    font-size: 15px;
+    font-size: 16px;
+	font-weight: 501;
+	color: rgb(103, 130, 179);
     /* opacity: .7; */
 }
 
@@ -48,7 +55,7 @@ div.box_form > form > input, div.box_form > form > textarea {
 }
 
 div.box_form > form > input {
-    width: 275px;
+    width: 405px;
 }
 
 div.box_form > form > textarea {
