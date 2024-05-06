@@ -9,5 +9,13 @@
 
     <h1>Forgot Password</h1>
 
+    <form>
+
+        <label for="email">email</label>
+        <input type="email" name="email" id="email">
+
+        <button>Send</button>
+    </form>
+
 </body>
 </html>
