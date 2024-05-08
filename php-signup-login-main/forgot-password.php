@@ -11,6 +11,7 @@
 
     <form>
 
+    <form method="post" action="sent-password-reset.php"></form>
         <label for="email">email</label>
         <input type="email" name="email" id="email">
 
