@@ -16,7 +16,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: comments
+      MYSQL_DATABASE: login_db
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
       
