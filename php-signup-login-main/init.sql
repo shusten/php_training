@@ -1,0 +1,8 @@
+CREATE TABLE user (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(128) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    reset_token_hash VARCHAR(64) DEFAULT NULL UNIQUE,
+    reset_token_expires_at DATETIME DEFAULT NULL
+);
