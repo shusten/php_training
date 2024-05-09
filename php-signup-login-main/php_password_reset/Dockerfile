@@ -9,6 +9,8 @@ RUN chmod -R 777 /var/www/html/
 # Habilitar o módulo headers_module do Apache
 RUN a2enmod headers
 
+RUN docker-php-ext-install mysqli
+
 # Definir a configuração do PHP para exibir erros no navegador
 RUN echo "display_errors = On" >> /usr/local/etc/php/php.ini
 
