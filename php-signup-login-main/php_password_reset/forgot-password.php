@@ -9,7 +9,7 @@
 
     <h1>Forgot Password</h1>
 
-    <form method="post" action="sent-password-reset.php">
+    <form method="post" action="send-password-reset.php">
 
         <label for="email">email</label>
         <input type="email" name="email" id="email">
