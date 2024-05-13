@@ -30,3 +30,9 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
+
+  mailserver:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"  # Porta para SMTP
+      - "8025:8025"  # Porta para Web UI
